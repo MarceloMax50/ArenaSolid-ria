@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Instituto Cativar</title>
+  <link rel="shortcut icon" href="imagens/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+  <body>
+    <div class="container" >      
+      <div class="content">      
+        <div id="login">
+          
+            <div class="logo">
+                <img src="imagens/logo.png"> 
+            </div>
+            <h1>Menu</h1>
+            <div class="sidenav">
+              <button class="dropdown-btn">Biblioteca
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="#">Cadastrar livro</a>
+                <a href="#">Consultar Livro</a>
+                <a href="#">Empréstimo</a>
+                <a href="#">Configuração</a>
+                <a href="#">Relatórios</a>
+              </div>
+              <a href="#services">Controle Interno</a>
+              <a href="#clients">Atividades Acadêmicas</a>
+              
+          </div>
+          
+        </div>
+      </div>
+    </div> 
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+  </body>
+</html>
